@@ -19,3 +19,15 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now())
 }
+
+model Exam {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  nameSlug    String
+  description String
+  trials      String[]
+  trialsCount Int?
+  status      String   @default("inactive") // active | inactive
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now())
+}

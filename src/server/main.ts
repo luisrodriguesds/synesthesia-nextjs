@@ -13,7 +13,6 @@ export const optionsHandler = {
     handleApiError(error, req, res);
   },
   onNoMatch: (req: NextApiRequestExtend, res: NextApiResponse) => {
-    console.log(req.method);
     res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   },
 };

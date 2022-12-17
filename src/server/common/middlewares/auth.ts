@@ -1,7 +1,8 @@
 import { NextApiResponse } from 'next';
-import { NextHandler } from 'next-connect';
 import { NextApiRequestExtend } from '../../main';
 import { AuthService } from '../../modules/auth/authService';
+
+type NextHandler = (err?: Error) => void;
 
 export const AuthMiddleware = async (
   req: NextApiRequestExtend,
